@@ -11,5 +11,5 @@ public abstract class Piece {
 	
 	protected Board getBoard() {
 		return board;
-	}
+	}	
 }
