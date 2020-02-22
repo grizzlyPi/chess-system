@@ -13,7 +13,6 @@ public class ChessPosition {
 		this.column = column;
 		this.row = row;
 	}
-	
 
 	public char getColumn() {
 		return column;
@@ -22,7 +21,6 @@ public class ChessPosition {
 	public int getRow() {
 		return row;
 	}
-
 
 	protected Position toPosition() {
 		return new Position(8 - row, column - 'a');

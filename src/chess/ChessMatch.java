@@ -35,13 +35,11 @@ public class ChessMatch {
 		return (ChessPiece) capturedPiece;
 	}
 	
-	
 	private void validateSourcePosition(Position source) {
 		if(!board.thereIsAPiece(source)) {
 			throw new ChessException("There is no piece on source position");
 		}
 	}
-	
 	
 	private Piece makeMove(Position source, Position target) {
 		Piece p = board.removePiece(source);
@@ -53,7 +51,6 @@ public class ChessMatch {
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
-	
 	
 	private void initialSetup() {
 		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
