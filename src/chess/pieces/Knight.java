@@ -9,7 +9,6 @@ public class Knight extends ChessPiece {
 
 	public Knight(Board board, Color color) {
 		super(board, color);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -17,7 +16,7 @@ public class Knight extends ChessPiece {
 		return "N";
 	}
 
-	public boolean canMove(Position position) {
+	private boolean canMove(Position position) {
 		ChessPiece p = (ChessPiece) getBoard().piece(position);
 		return p == null || p.getColor() != getColor();
 	}
