@@ -57,8 +57,7 @@ public class Pawn extends ChessPiece {
 			}
 			
 			// #specialmove en passant white
-			// En passant is a move in chess. It is a special pawn capture that can only occur 
-			// immediately after a pawn makes a move of two squares from its starting square.
+			// En passant is a move in chess. It is a special pawn capture that can only occur immediately after a pawn makes a move of two squares from its starting square.
 			if(position.getRow() == 3) {
 				Position left = new Position(position.getRow(), position.getColumn() - 1);
 				if(board.positionExists(left) && isThereOpponentPiece(left) && board.piece(left) == chessMatch.getEnPassantVulnerable()) {
@@ -69,7 +68,8 @@ public class Pawn extends ChessPiece {
 					mat[right.getRow() - 1][right.getColumn()] = true;
 				}
 			}
-		} else {
+		} 
+		else {
 			p.setValues(position.getRow() + 1, position.getColumn());
 
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
@@ -100,8 +100,7 @@ public class Pawn extends ChessPiece {
 			}
 			
 			// #specialmove en passant black
-			// En passant is a move in chess. It is a special pawn capture that can only occur 
-			// immediately after a pawn makes a move of two squares from its starting square.
+			// En passant is a move in chess. It is a special pawn capture that can only occur immediately after a pawn makes a move of two squares from its starting square.
 			if(position.getRow() == 4) {
 				Position left = new Position(position.getRow(), position.getColumn() - 1);
 				if(board.positionExists(left) && isThereOpponentPiece(left) && board.piece(left) == chessMatch.getEnPassantVulnerable()) {
